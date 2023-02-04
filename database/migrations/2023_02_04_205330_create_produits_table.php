@@ -21,6 +21,8 @@ return new class extends Migration
             $table->integer('prix');
             $table->boolean('active');
             $table->timestamps();
+
+           
         });
     }
 

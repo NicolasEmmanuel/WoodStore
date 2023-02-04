@@ -17,7 +17,7 @@ class CategorieFactory extends Factory
     public function definition()
     {
         return [
-            'numero_commande'=>uniqid(),
+            
             'nom'=>$this->faker->sentence(),
             'image'=>$this->faker->imageUrl(),
         

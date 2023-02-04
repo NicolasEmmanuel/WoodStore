@@ -11,7 +11,7 @@ class Categorie extends Model
     use HasFactory;
 
     public function produits(){
-        return $this->belongsToMany(Produit::class);
+        return $this->hasMany(Produit::class);
     
     }
 }

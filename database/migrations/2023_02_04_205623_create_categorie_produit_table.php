@@ -15,7 +15,7 @@ return new class extends Migration
     {
         Schema::create('categorie_produit', function (Blueprint $table) {
 
-            $table->foreignId('commande_id')->references('id')->on('commandes');
+            $table->foreignId('categorie_id')->references('id')->on('categories');
             $table->foreignId('produit_id')->references('id')->on('produits');
 
         });
