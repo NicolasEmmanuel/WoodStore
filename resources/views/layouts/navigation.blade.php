@@ -17,7 +17,7 @@
                     </x-nav-link>
 
 
-                    <x-nav-link :href="route('index')" :active="request()->routeIs('index')">
+                    <x-nav-link :href="route('accueil')" :active="request()->routeIs('accueil')">
                         {{ __('Accueil') }}
                     </x-nav-link>
 
