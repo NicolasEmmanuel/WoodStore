@@ -17,7 +17,7 @@ class CategorieFactory extends Factory
     public function definition()
     {
         return [
-            
+        
             'nom'=>$this->faker->sentence(),
             'image'=>$this->faker->imageUrl(),
         

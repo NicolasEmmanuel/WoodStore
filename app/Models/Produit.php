@@ -18,6 +18,7 @@ class Produit extends Model
 
     public function categories(){
         return $this->hasOne(Categorie::class);
-      
+        
     }
+
 }

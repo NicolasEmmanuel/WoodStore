@@ -19,11 +19,9 @@ return new class extends Migration
             $table->string('numero_commande');
             $table->dateTime('shipped_at')->nullable();
 
-            $table->unsignedBigInteger('user_id');
-
             $table->timestamps();
 
-           /*  $table->foreignId('user_id')->references('id')->on('users'); */
+            $table->foreignId('user_id')->references('id')->on('users');
 
 
         });

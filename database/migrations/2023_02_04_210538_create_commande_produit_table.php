@@ -16,13 +16,10 @@ return new class extends Migration
         Schema::create('commande_produit', function (Blueprint $table) {
             $table->foreignId('commande_id');
             $table->foreignId('produit_id');
-         /*    $table->foreignId('categorie_id'); */
+       
 
             $table->integer('quantite_total');
             $table->integer('prix_total');
-
-         /*    $table->foreignId('commande_id')->references('id')->on('commandes');
-            $table->foreignId('produit_id')->references('id')->on('produits'); */
         });
     }
 
