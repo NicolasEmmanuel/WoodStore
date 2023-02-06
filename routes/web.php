@@ -16,13 +16,15 @@ use App\Http\Controllers\CategorieController;
 |
 */
 
-/* Route::get('/', function () {
-    return view('welcome');
-}); */
 
+
+
+Route::get('/', [CategorieController::class, 'accueil'])->name('accueil');
 
 Route::get('/Accueil', [CategorieController::class, 'accueil'])->name('accueil');
+
 Route::get('/produit', [ProduitController::class, 'index'])->name('index');
+Route::get('/detail/{id}', [ProduitController::class, 'detail'])->name('detail');
 
 Route::get('/dashboard', function () {
     return view('dashboard');

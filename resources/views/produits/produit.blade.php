@@ -19,8 +19,10 @@
                 {{-- foreach start--}}
                 @foreach ( $produits as $produit )
 
+               
+
                     <article class="rounded-xl bg-white p-3 shadow-lg hover:shadow-xl hover:transform hover:scale-105 duration-300 ">
-                        <a href="#">
+                        <a href="{{route('detail',["id"=>$produit->id])}}">{{$produit->nom}}>
                           <div class="relative flex items-end overflow-hidden rounded-xl">
                             <img src="{{ $produit->image}}" alt="Hotel Photo" />
                                 <div class="flex items-center space-x-1.5 rounded-lg bg-blue-500 px-4 py-1.5 text-white duration-100 hover:bg-blue-600">
@@ -36,7 +38,7 @@
                                     <p>
                                         <span class="text-lg font-bold text-blue-500">{{ $produit->prix}}€</span>
                                     </p>
-                                   <add-to-cart></add-to-cart>
+                                 
                                 </div>
                           </div>
                         </a>
