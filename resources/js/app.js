@@ -11,6 +11,6 @@ Alpine.start();
 
 const app = createApp();
 
-app.component('AddToCart', AddToCart)
+app.component('AddToCart', AddToCart);
 
 app.mount('#app');
