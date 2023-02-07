@@ -20,7 +20,6 @@ use App\Http\Controllers\CategorieController;
 
 
 Route::get('/', [CategorieController::class, 'accueil'])->name('accueil');
-
 Route::get('/Accueil', [CategorieController::class, 'accueil'])->name('accueil');
 
 Route::get('/produit', [ProduitController::class, 'index'])->name('index');

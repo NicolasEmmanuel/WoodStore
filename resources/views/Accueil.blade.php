@@ -20,7 +20,7 @@
                 @foreach ( $categories as $categorie )
 
                     <article class="rounded-xl bg-white p-3 shadow-lg hover:shadow-xl hover:transform hover:scale-105 duration-300 ">
-                        <a href="#">
+                        <a href="{{ __('produit') }}">
                             <div class="relative flex items-end overflow-hidden rounded-xl">
                                 <img src="{{ $categorie->image }}" alt="furniture photo" />
                                 <div class="flex items-center space-x-1.5 rounded-lg bg-blue-500 px-4 py-1.5 text-white duration-100 hover:bg-blue-600">
@@ -48,7 +48,7 @@
                 <div class="container px-6 mx-auto space-y-6 divide-y divide-gray-400 md:space-y-12 divide-opacity-50">
                     <div class="grid justify-center  lg:justify-between">
                         <div class="flex flex-col self-center text-sm text-center md:block lg:col-start-1 md:space-x-6">
-                            <span>Copy rgight © 2023 by codemix team </span>
+                            <span>Copyright © 2023 by codemix team </span>
                             <a rel="noopener noreferrer" href="#">
                                 <span>Privacy policy</span>
                             </a>

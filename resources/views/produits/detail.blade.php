@@ -14,45 +14,55 @@
 
   
 
-  <!-- Product List -->
-  <section class="py-10 bg-gray-100">
-    <div class="mx-auto grid max-w-6xl  grid-cols-1 gap-6 p-6 sm:grid-cols-2 md:grid-cols-3 ">
-      <article class="rounded-xl bg-white p-3 shadow-lg hover:shadow-xl hover:transform hover:scale-105 duration-300 ">
-        <a href="#">
-          <div class="relative flex items-end overflow-hidden rounded-xl">
-            <img src="{{ $produits->image}}" alt="db img" />
-            <div class="flex items-center space-x-1.5 rounded-lg bg-blue-500 px-4 py-1.5 text-white duration-100 hover:bg-blue-600">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-4 w-4">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 00-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 00-16.536-1.84M7.5 14.25L5.106 5.272M6 20.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm12.75 0a.75.75 0 11-1.5 0 .75.75 0 011.5 0z" />
-              </svg>
-  
+<!-- component -->
+<style>@import url(https://cdnjs.cloudflare.com/ajax/libs/MaterialDesign-Webfont/5.3.45/css/materialdesignicons.min.css);</style>
+<div class="min-w-screen min-h-screen bg-cyan-600 flex items-center p-5 lg:p-10 overflow-hidden relative">
+    <div class="w-full max-w-6xl rounded bg-white shadow-xl p-10 lg:p-20 mx-auto text-gray-800 relative md:text-left">
+        <div class="md:flex items-center -mx-10">
+            <div class="w-full md:w-1/2 px-10 mb-10 md:mb-0">
+                <div class="relative">
+                    <img src="{{ $produits->image}}" class="w-full relative z-10" alt="img database">
+                    <div class="border-4 border-yellow-200 absolute top-10 bottom-10 left-10 right-10 z-0"></div>
+                </div>
+            </div>
+            <div class="w-full md:w-1/2 px-10">
+                <div class="mb-10">
+                    <h1 class="font-bold uppercase text-2xl mb-5">{{$produits->nom}}<br></h1>
+                    <p class="text-sm"> {{$produits->description}}
+                      <a href="#" class="opacity-50 
+                                        text-gray-900 
+                                            hover:opacity-100 
+                                              inline-block text-xs 
+                                                leading-none border-b 
+                                                  border-gray-900">plus
+                                                    <i class="mdi mdi-arrow-right"></i>
+                        </a>
+                      </p>
+                </div>
+                <div>
+                    <div class="inline-block align-bottom mr-5">
+                        
+                        <span class="font-bold text-5xl leading-none align-baseline">{{$produits->prix}}</span>
+                        <span class="text-2xl leading-none align-baseline">.00</span>
+                        <span class="text-2xl leading-none align-baseline">€</span>
 
+                    </div>
+                    <div class="inline-block align-bottom">
+                        <button class="bg-cyan-600 opacity-75 
+                                          hover:opacity-100 text-white
+                                          hover:text-gray-900 
+                                              rounded-full px-10 py-2 
+                                                font-semibold">
+                                  <i class="mdi mdi-cart -ml-2 mr-2"></i> Ajouter au panier
+                          </button>
+                    </div>
+                </div>
             </div>
-          </div>
-  
-          <div class="mt-1 p-2">
-            <h2 class="text-slate-700">{{ $produits->nom}}</h2>
-            <p class="mt-1 text-sm text-slate-400">{{ $produits->description}}</p>
-  
-            <div class="mt-3 flex items-end justify-between">
-              <p>
-                <span class="text-lg font-bold text-blue-500">{{ $produits->prix}}€</span>
-                
-              </p>
-  
-              <div class="flex items-center space-x-1.5 rounded-lg bg-blue-500 px-4 py-1.5 text-white duration-100 hover:bg-blue-600">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-4 w-4">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 00-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 00-16.536-1.84M7.5 14.25L5.106 5.272M6 20.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm12.75 0a.75.75 0 11-1.5 0 .75.75 0 011.5 0z" />
-                </svg>
-  
-                <button class="text-sm"></button>
-              </div>
-            </div>
-          </div>
-        </a>
-      </article>  
-     
-  </section>
+        </div>
+    </div>
+</div>
+
+
   
   <!-- Footer -->
   <footer class="py-6  bg-gray-200 text-gray-900">
