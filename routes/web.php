@@ -37,6 +37,8 @@ Route::middleware('auth', 'verified')->group(function () {
 //route pour l'administrateur.
 Route::middleware(['auth','grade:admin'])->group(function (){
     Route::get('/dashboard', function () {return view('dashboard'); })->middleware(['auth', 'verified'])->name('dashboard');
+    route::resource('produits', DashboardController::class);
+   
 });
 
 require __DIR__.'/auth.php';

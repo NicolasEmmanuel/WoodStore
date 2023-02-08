@@ -20,4 +20,6 @@ class ProduitController extends Controller
         return view('produits.detail', compact('produits') );
     }
 
+  
+
 }
